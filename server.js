@@ -3,7 +3,7 @@ const app = express()
 const port = 3001
 
 app.use(express.static('public'))
-app.use('/CSS', express.static(__dirname + 'public/CSS')) //set up links in public folder
+app.use('/CSS', express.static(__dirname + 'public/CSS')) //set up links in public folder, this one is not working but img is
 app.use('/IMG', express.static(__dirname + 'public/IMG'))
 
 app.set('view engine', 'ejs')
