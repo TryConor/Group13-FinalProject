@@ -1,3 +1,67 @@
+/* Set the body element to a flex container with a column direction, center alignment, and minimum height of 100vh */
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
     background-color: aquamarine;
+}
+
+/* Style the dropdown menu */
+.dropdown {
+    position: absolute; /* position the menu relative to the viewport */
+    top: 1rem; /* set the distance from the top */
+    left: 50%; /* center the menu horizontally */
+    transform: translateX(-50%); /* move the menu back by 50% of its own width to center it */
+    width: max-content; /* adjust the width to match the dropdown menu */
+    min-width: 150px; /* set a minimum width if needed */
+  }
+
+/* Style the dropdown options */
+.dropdown-options {
+  display: none; /* hide the options by default */
+  position: absolute; /* position the options relative to the viewport */
+  background-color: #f9f9f9; /* set the background color */
+  border: 1px solid #ccc; /* add a border */
+  padding: 10px; /* add padding */
+  width: 150px; /* set the width */
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.2); /* add a box shadow */
+}
+
+/* Show the dropdown options when hovering over the dropdown button */
+.dropdown:hover .dropdown-options {
+  display: block; /* show the options */
+}
+
+/* Style the image */
+img {
+    margin-top: 5rem; /* add margin to the top */
+  }
+
+/* Style the dropdown options links */
+.dropdown-options a {
+  text-decoration: none; /* remove the underline from the links */
+  color: #333; /* set the text color */
+  display: block; /* make the links block-level elements */
+  padding: 10px; /* add padding */
+  top: 3rem; /* set the distance from the top */
+}
+
+/* Style the dropdown options links on hover */
+.dropdown-options a:hover {
+  background-color: #ccc; /* set the background color */
+  color: #fff; /* set the text color */
+}
+
+/* Style the dropdown button */
+.dropdown button {
+    font-size: 18px; /* increase the font size */
+    padding: 10px 63px; /* add padding to make the button larger */
+    border: none; /* remove the default border */
+    border-radius: 5px; /* add rounded corners */
+    background-color: #fff; /* set the background color */
+    cursor: pointer; /* change the cursor shape on hover */
 }
