@@ -1,24 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title></title>
+    <title>Recipe </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/CSS/mystyle.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Hello HTML</h1>
+    <header>
+        <h1>Recipe Finder</h1>
     <div class="dropdown" id="dropdown">
         <button>Menu</button>
         <div class="dropdown-options">
-            <a href="#">Chicken</a>
-            <a href="#">Pork</a>
-            <a href="#">Steak</a>
-            <a href="#">Beef</a>
-            <a href="#">Tukey</a>
-            <a href="#">Lamb</a>
+            <a href="#" onclick="getRecipes('Chicken')">Chicken</a>
+            <a href="#" onclick="getRecipes('Pork')">Pork</a>
+            <a href="#" onclick="getRecipes('Steak')">Steak</a>
+            <a href="#" onclick="getRecipes('Beef')">Beef</a>
+            <a href="#" onclick="getRecipes('Turkey')">Turkey</a>
+            <a href="#" onclick="getRecipes('Lamb')">Lamb</a>
         </div>
     </div>
-    <img src='/IMG/dog.jpg' alt="">
+    <div id="root">
+
+    </div>
+    </header>
+    <img class="dog-image" src='/IMG/Food.jpg' alt="">
+    
 </body>
+<script>
+function getRecipes(protein) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'get_recipes.php?protein=' + protein, true);
+    xhr.onload = function() {
+        if (this.status == 200) {
+            var recipes = JSON.parse(this.responseText);
+            // Display the recipes on the page
+            displayRecipes(recipes);
+        }
+    };
+    xhr.send();
+}
+
+function displayRecipes(recipes) {
+    var root = document.getElementById('root');
+    root.innerHTML = '';
+    for (var i = 0; i < recipes.length; i++) {
+        var recipe = recipes[i];
+        var div = document.createElement('div');
+        div.innerHTML = '<h2>' + recipe.recipe_name + '</h2><p>' + recipe.ingredients + '</p><p>' + recipe.instructions + '</p>';
+        root.appendChild(div);
+    }
+}
+</script>
 </html>

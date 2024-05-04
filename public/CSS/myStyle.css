@@ -4,16 +4,17 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 110vh; /* add some extra height to the body */
     margin: 0;
     padding: 0;
     background-color: aquamarine;
-}
+  }
 
 /* Style the dropdown menu */
 .dropdown {
-    position: absolute; /* position the menu relative to the viewport */
-    top: 1rem; /* set the distance from the top */
+    display: inline-block;
+    position: fixed; /* position the menu relative to the viewport */
+    top: 126px; /* set the distance from the top */
     left: 50%; /* center the menu horizontally */
     transform: translateX(-50%); /* move the menu back by 50% of its own width to center it */
     width: max-content; /* adjust the width to match the dropdown menu */
@@ -38,8 +39,10 @@ body {
 
 /* Style the image */
 img {
-    margin-top: 5rem; /* add margin to the top */
-  }
+    margin-top: 40vh; /* move the image down by 30% of the viewport height */
+    margin-left: auto;
+    margin-right: auto; /* center the image horizontally */
+}
 
 /* Style the dropdown options links */
 .dropdown-options a {
@@ -65,3 +68,186 @@ img {
     background-color: #fff; /* set the background color */
     cursor: pointer; /* change the cursor shape on hover */
 }
+/* Style the h1 elements */
+h1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+  }
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ccc;
+    padding: 50px 0 20px 0; /* add padding to the bottom of the header */
+    text-align: center;
+  }
+  
+  header h1 {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .image {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-image: url('./public/IMG/Food.jpg');
+  }
+
+  .image-overlay{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 165, 0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    letter-spacing: 5px;
+    font-size: 3rem;
+  }
+
+  /* Set the body element to a flex container with a column direction, center alignment, and minimum height of 100vh */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 110vh; /* add some extra height to the body */
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+  }
+
+/* Style the dropdown menu */
+.dropdown {
+    display: inline-block;
+    position: fixed; /* position the menu relative to the viewport */
+    top: 126px; /* set the distance from the top */
+    left: 50%; /* center the menu horizontally */
+    transform: translateX(-50%); /* move the menu back by 50% of its own width to center it */
+    width: max-content; /* adjust the width to match the dropdown menu */
+    min-width: 150px; /* set a minimum width if needed */
+  }
+
+/* Style the dropdown options */
+.dropdown-options {
+  display: none; /* hide the options by default */
+  position: absolute; /* position the options relative to the viewport */
+  background-color: #f9f9f9; /* set the background color */
+  border: 1px solid #ccc; /* add a border */
+  padding: 10px; /* add padding */
+  width: 150px; /* set the width */
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.2); /* add a box shadow */
+}
+
+/* Show the dropdown options when hovering over the dropdown button */
+.dropdown:hover .dropdown-options {
+  display: block; /* show the options */
+}
+
+/* Style the image */
+img {
+    margin-top: 40vh; /* move the image down by 30% of the viewport height */
+    margin-left: auto;
+    margin-right: auto; /* center the image horizontally */
+}
+
+/* Style the dropdown options links */
+.dropdown-options a {
+  text-decoration: none; /* remove the underline from the links */
+  color: #333; /* set the text color */
+  display: block; /* make the links block-level elements */
+  padding: 10px; /* add padding */
+  top: 3rem; /* set the distance from the top */
+}
+
+/* Style the dropdown options links on hover */
+.dropdown-options a:hover {
+  background-color: #ccc; /* set the background color */
+  color: #fff; /* set the text color */
+}
+
+/* Style the dropdown button */
+.dropdown button {
+    font-size: 18px; /* increase the font size */
+    padding: 10px 63px; /* add padding to make the button larger */
+    border: none; /* remove the default border */
+    border-radius: 5px; /* add rounded corners */
+    background-color: #fff; /* set the background color */
+    cursor: pointer; /* change the cursor shape on hover */
+}
+/* Style the h1 elements */
+h1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+  }
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ccc;
+    padding: 50px 0 20px 0; /* add padding to the bottom of the header */
+    text-align: center;
+  }
+  
+  header h1 {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .image {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-image: url('./public/IMG/Food.jpg');
+  }
+
+  .image-overlay{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 165, 0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    letter-spacing: 5px;
+    font-size: 3rem;
+  }
+
+  .Food-image {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-image: url('/IMG/Food.jpg');
+  background-color: rgb(255, 165, 0,.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  letter-spacing: 5px;
+  font-size: 3rem;
+  }
+
+  .Food-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the opacity of the overlay */
+    z-index: -1; /* Position the overlay behind the text and other elements */
+  }
